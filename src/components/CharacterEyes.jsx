@@ -1,0 +1,20 @@
+import bill from "../../public/eyes/bill.svg?raw";
+import ghost from "../../public/eyes/ghost.svg?raw";
+import sleepy from "../../public/eyes/sleepy.svg?raw";
+import wide from "../../public/eyes/wide.svg?raw";
+import angry from "../../public/eyes/angry.svg?raw";
+import surprised from "../../public/eyes/surprised.svg?raw";
+import arched from "../../public/eyes/arched.svg?raw";
+
+// SVG locaux créés pour l'affiche : pas de contenu provenant des visiteurs.
+const drawings = { bill, ghost, sleepy, wide, angry, surprised, arched };
+
+export default function CharacterEyes({ model = "wide" }) {
+  return (
+    <span
+      className={`character-eyes eyes-${model}`}
+      aria-hidden="true"
+      dangerouslySetInnerHTML={{ __html: drawings[model] || drawings.wide }}
+    />
+  );
+}
