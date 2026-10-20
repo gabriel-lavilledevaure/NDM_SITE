@@ -12,7 +12,7 @@ const drawings = { bill, ghost, sleepy, wide, angry, surprised, arched };
 export default function CharacterEyes({ model = "wide" }) {
   return (
     <span
-      className={`character-eyes eyes-${model}`}
+      className={`character-eyes eyes-${model} flex h-full w-full items-center justify-center p-[clamp(.25rem,1.3vw,1.25rem)] [&_svg]:pointer-events-none [&_svg]:h-full [&_svg]:max-h-[90%] [&_svg]:w-full [&_svg]:select-none`}
       aria-hidden="true"
       dangerouslySetInnerHTML={{ __html: drawings[model] || drawings.wide }}
     />

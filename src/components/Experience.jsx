@@ -2,8 +2,8 @@ import { motion, useReducedMotion } from "motion/react";
 
 const moments = [
   { time: "09:00", title: "TOUT COMMENCE", text: "Les équipes se retrouvent. Les premières idées fusent, personne ne sait encore où elles vont mener.", rotate: "-rotate-3", bg: "bg-primary" },
-  { time: "02:17", title: "ÇA BOUGE ENCORE", text: "Les pistes évoluent, les écrans restent allumés, on s'entraide et on invente des solutions.", rotate: "rotate-2", bg: "bg-[#251782]" },
-  { time: "08:59", title: "DERNIÈRE MINUTE", text: "Un dernier détail, un export, un regard sur le résultat. Vingt-quatre heures viennent de passer.", rotate: "-rotate-2", bg: "bg-[#4b35dd]" },
+  { time: "02:17", title: "ÇA BOUGE ENCORE", text: "Les pistes évoluent, les écrans restent allumés, on s'entraide et on invente des solutions.", rotate: "rotate-2", bg: "bg-indigo-midnight" },
+  { time: "08:59", title: "DERNIÈRE MINUTE", text: "Un dernier détail, un export, un regard sur le résultat. Vingt-quatre heures viennent de passer.", rotate: "-rotate-2", bg: "bg-indigo-bright" },
 ];
 
 export default function Experience() {

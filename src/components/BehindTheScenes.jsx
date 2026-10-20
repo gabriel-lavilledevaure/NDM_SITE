@@ -10,7 +10,7 @@ const disciplines = [
 export default function BehindTheScenes() {
   const reduce = useReducedMotion();
   return (
-    <section id="coulisses" aria-labelledby="coulisses-title" className="relative overflow-hidden bg-[#3925bd] py-24 md:py-36">
+    <section id="coulisses" aria-labelledby="coulisses-title" className="relative overflow-hidden bg-indigo-section py-24 md:py-36">
       <div className="mx-auto max-w-[1500px] px-5 md:px-12">
         <div className="flex items-center justify-between border-b border-white/40 pb-4 text-sm font-bold uppercase tracking-widest"><span>03 / Les coulisses</span><span>Plusieurs talents. Une équipe.</span></div>
         <div className="grid gap-12 py-16 lg:grid-cols-[.85fr_1.15fr]">

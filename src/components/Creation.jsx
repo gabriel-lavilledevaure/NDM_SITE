@@ -14,7 +14,7 @@ export default function Creation() {
     <section ref={section} id="creation" aria-labelledby="creation-title" className="relative isolate min-h-[110svh] overflow-hidden bg-pink text-background">
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <motion.div style={reduce ? {} : { rotate: rotation, y: move }} className="absolute -right-24 top-16 aspect-square w-[70vw] max-w-[950px] border-[clamp(24px,6vw,100px)] border-background/10" />
-        <div className="absolute bottom-0 right-0 h-1/3 w-full bg-[repeating-linear-gradient(135deg,transparent_0px,transparent_22px,#03020716_22px,#03020716_24px)]" />
+        <div className="absolute bottom-0 right-0 h-1/3 w-full bg-[repeating-linear-gradient(135deg,transparent_0px,transparent_22px,rgba(3,2,7,.09)_22px,rgba(3,2,7,.09)_24px)]" />
       </div>
       <div className="relative mx-auto flex min-h-[110svh] max-w-[1600px] flex-col justify-between px-5 pb-16 pt-24 md:px-12 md:pt-32">
         <div className="flex items-center justify-between border-b-2 border-background pb-4 text-sm font-bold uppercase tracking-widest">
