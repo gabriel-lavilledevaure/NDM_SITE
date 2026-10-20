@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    name: Build website
     runs-on: ubuntu-latest
 
     steps:
@@ -37,6 +38,8 @@ jobs:
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload build
         uses: actions/upload-pages-artifact@v3
@@ -44,12 +47,13 @@ jobs:
           path: dist
 
   deploy:
+    name: Deploy website
+    needs: build
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    needs: build
 
     steps:
       - name: Deploy to GitHub Pages
