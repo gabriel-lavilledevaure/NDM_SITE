@@ -113,10 +113,23 @@ export default function Hero() {
       ))}
 
       <div className="cell t relative flex min-h-0 min-w-0 flex-col justify-center overflow-hidden bg-primary p-[clamp(1.2rem,3.5vw,3.2rem)]">
-        <h1 id="hero-title" className="hero-logo flex items-start gap-[clamp(.4rem,1vw,1rem)] [&_img]:h-[clamp(100px,27svh,300px)] [&_img]:max-w-[calc(100%-3.5rem)] max-[899px]:[&_img]:h-auto max-[899px]:[&_img]:max-h-[200px] max-[480px]:[&_img]:max-h-[130px] [&_span]:font-archivo [&_span]:text-[clamp(1rem,2vw,2rem)] [&_span]:font-black">
-          <img src={`${import.meta.env.BASE_URL}logo-nuit-mmi.svg`} alt="Nuit MMI" />
-          <span>2027</span>
-        </h1>
+        <div className="grid w-full grid-cols-1 items-center gap-6 min-[600px]:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] min-[600px]:gap-5">
+          <h1 id="hero-title" className="hero-logo flex min-w-0 items-center gap-[clamp(.4rem,1vw,1rem)] [&_img]:h-[clamp(100px,27svh,300px)] [&_img]:max-w-[calc(100%-3.5rem)] max-[899px]:[&_img]:h-auto max-[899px]:[&_img]:max-h-[200px] max-[480px]:[&_img]:max-h-[130px] [&_span]:font-archivo [&_span]:text-[clamp(1rem,2vw,2rem)] [&_span]:font-black">
+            <img src={`${import.meta.env.BASE_URL}logo-nuit-mmi.svg`} alt="Nuit MMI" />
+            <span>2027</span>
+          </h1>
+          <div className="flex w-full items-center justify-center min-[600px]:min-h-28">
+            <a
+              href={TWITCH_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex min-h-14 w-fit max-w-full items-center justify-center gap-4 border-2 border-background bg-pink px-6 py-3.5 text-center font-archivo text-[clamp(.78rem,1.05vw,1rem)] font-black uppercase leading-tight tracking-tight text-background shadow-[5px_5px_0_#08040d] transition-[transform,box-shadow,background-color] duration-200 hover:-translate-y-1 hover:bg-white hover:shadow-[7px_7px_0_#08040d] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white max-[480px]:w-full max-[480px]:px-3"
+            >
+              <span>REGARDER SUR TWITCH</span>
+              <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-0.5">↗</span>
+            </a>
+          </div>
+        </div>
         <p className="mt-4 max-w-[30ch] text-[clamp(.9rem,1.2vw,1.1rem)] font-semibold">
           24 heures pour réaliser une création numérique, en direct de l'IUT du
           Limousin.
@@ -129,14 +142,6 @@ export default function Hero() {
       <div className="cell g relative flex min-h-0 min-w-0 flex-col items-start justify-center gap-2 overflow-hidden bg-primary p-[clamp(1rem,3vw,2.4rem)]">
         <p className="font-archivo text-[clamp(2.2rem,4vw,3.8rem)] font-black uppercase leading-[.9]">9 h → 9 h</p>
         <p className="text-[.95rem] font-semibold opacity-85">Du jeudi 7 au vendredi 8 janvier 2027</p>
-        <a
-          className="inline-block bg-pink text-background font-archivo font-black uppercase text-base px-[1.4em] py-[.8em] [clip-path:polygon(4%_0,100%_8%,96%_100%,0_90%)] transition-transform hover:-rotate-2 hover:scale-105"
-          href={TWITCH_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Regarder sur Twitch
-        </a>
       </div>
     </section>
   );

@@ -140,7 +140,7 @@ export default function Night() {
           <div className="mb-[var(--section-heading-gap)]"><SectionMeta number="05" label="Le programme" detail="Du début à la fin" light /></div>
           <h2
             id="schedule-title"
-            className="font-archivo mb-5 text-[clamp(2rem,4.5vw,3.6rem)] leading-[.88] font-black uppercase max-[859px]:text-[clamp(1.9rem,9vw,3rem)]"
+            className="font-archivo mb-5 text-[clamp(2rem,4.5vw,3.6rem)] leading-[1.12] font-black uppercase max-[859px]:text-[clamp(1.9rem,9vw,3rem)]"
           >
             Le programme
           </h2>

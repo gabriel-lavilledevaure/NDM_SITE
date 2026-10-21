@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-pink px-[var(--site-gutter)] pb-6 pt-[clamp(3.5rem,7vw,7rem)] text-background">
       <div className="mx-auto grid max-w-[1440px] grid-cols-1 gap-[clamp(3rem,8vw,9rem)] pb-[clamp(3rem,6vw,6rem)] lg:grid-cols-[minmax(0,1.55fr)_minmax(230px,.65fr)]">
-        <div className="[&_h2]:my-6 [&_h2]:font-archivo [&_h2]:text-[clamp(2.25rem,8.5vw,9rem)] [&_h2]:font-black [&_h2]:uppercase [&_h2]:leading-[.88] [&_h2]:tracking-[-.045em] [&>p]:max-w-[40ch] [&>p]:text-lg">
+        <div className="[&_h2]:my-6 [&_h2]:font-archivo [&_h2]:text-[clamp(2.25rem,8.5vw,9rem)] [&_h2]:font-black [&_h2]:uppercase [&_h2]:leading-[1.12] [&_h2]:tracking-[-.045em] [&>p]:max-w-[40ch] [&>p]:text-lg">
           <p className="font-archivo text-sm font-bold uppercase tracking-wider">Nuit MMI · Édition 2027</p>
           <h2>
             LA NUIT

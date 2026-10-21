@@ -222,7 +222,12 @@ img, svg, video { max-width: 100%; }
 }
 .site-container { width: 100%; max-width: 1500px; margin-inline: auto; padding-inline: var(--site-gutter); }
 .site-section { padding-block: var(--section-space); }
-.site-heading { font-family: var(--font-archivo); font-size: clamp(2.65rem, 6.5vw, 6.75rem); font-weight: 900; line-height: .91; letter-spacing: -.065em; text-transform: uppercase; overflow-wrap: normal; }
+.site-heading { font-family: var(--font-archivo); font-size: clamp(2.65rem, 6.5vw, 6.75rem); font-weight: 900; line-height: 1.12; letter-spacing: -.065em; text-transform: uppercase; overflow-wrap: normal; }
 .site-section-title { margin-top: var(--section-heading-gap); }
 .site-section-content { margin-top: var(--section-content-gap); }
 @media (max-width: 420px) { .site-heading { font-size: clamp(2.15rem, 9.6vw, 2.65rem); } }
+
+/* Shared heading rhythm: accents and cedillas never collide. */
+.site-heading { line-height: 1.12; }
+
+

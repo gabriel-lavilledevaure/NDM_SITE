@@ -111,12 +111,13 @@ export default function Experience() {
           }}
           className="mt-8"
         >
-          <h2 id="experience-title" className="site-heading">
-            ÇA SE VIT.
-            <br />
-            <span className="text-pink">ÇA NE SE</span>
-            <br />
-            RACONTE PAS.
+          <h2
+            id="experience-title"
+            className="site-heading flex flex-col items-start gap-[0.12em] leading-[1.08]"
+          >
+            <span className="block text-pink">ÇA SE VIT.</span>
+            <span className="block">ÇA NE SE</span>
+            <span className="block">RACONTE PAS.</span>
           </h2>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
@@ -162,7 +163,7 @@ export default function Experience() {
             }}
             className="lg:pr-10"
           >
-            <p className="font-archivo text-[clamp(2rem,4.5vw,4.5rem)] leading-[0.95] font-black tracking-[-0.055em] uppercase">
+            <p className="font-archivo text-[clamp(2rem,4.5vw,4.5rem)] leading-[1.12] font-black tracking-[-0.055em] uppercase">
               ET LA
               <br />
               <span className="text-pink">SUITE ?</span>

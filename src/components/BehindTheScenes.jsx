@@ -197,7 +197,7 @@ export default function BehindTheScenes() {
                       </span>
                     </div>
 
-                    <h3 className="font-archivo group-hover:text-pink max-w-full text-[clamp(2.1rem,4.3vw,5rem)] leading-[0.9] font-black tracking-[-0.045em] break-words uppercase transition-colors duration-300">
+                    <h3 className="font-archivo group-hover:text-pink max-w-full text-[clamp(2.1rem,4.3vw,5rem)] leading-[1.12] font-black tracking-[-0.045em] break-words uppercase transition-colors duration-300">
                       {discipline.name}
                     </h3>
 
