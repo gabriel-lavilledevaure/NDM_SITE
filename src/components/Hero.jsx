@@ -138,38 +138,58 @@ export default function Hero() {
       ))}
 
       {/* Main hero tile */}
-      <div className="cell t bg-primary relative flex min-h-0 min-w-0 flex-col justify-center overflow-hidden p-[clamp(1.2rem,3.5vw,3.2rem)]">
-        <div className="grid w-full grid-cols-1 items-center gap-8 min-[600px]:grid-cols-2 min-[600px]:gap-6">
-          {/* Logo */}
+      <div className="cell t bg-primary relative grid min-h-0 min-w-0 grid-cols-1 items-center gap-8 overflow-hidden p-[clamp(1.2rem,3.5vw,3.2rem)] min-[600px]:grid-cols-2 min-[600px]:gap-6">
+        {/* Left: logo, year and introduction */}
+        <div className="flex min-w-0 flex-col items-start justify-center">
+          {/* Logo + year */}
           <h1
             id="hero-title"
-            className="hero-logo [&_span]:font-archivo flex min-w-0 items-center gap-[clamp(.4rem,1vw,1rem)] [&_img]:h-[clamp(100px,27svh,300px)] [&_img]:max-w-[calc(100%-3.5rem)] max-[899px]:[&_img]:h-auto max-[899px]:[&_img]:max-h-[200px] max-[480px]:[&_img]:max-h-[130px] [&_span]:text-[clamp(1rem,2vw,2rem)] [&_span]:font-black"
+            className="flex w-full min-w-0 items-start gap-[clamp(.5rem,1.4vw,1.25rem)]"
           >
             <img
               src={`${import.meta.env.BASE_URL}logo-nuit-mmi.svg`}
               alt="Nuit MMI"
+              className="block h-auto max-h-[clamp(160px,34svh,360px)] w-full max-w-[85%] min-w-0 object-contain object-left-top"
             />
-            <span>2027</span>
+
+            <span className="font-archivo shrink-0 pt-[clamp(.15rem,.7vw,.6rem)] text-[clamp(1rem,2vw,2rem)] leading-none font-black">
+              2027
+            </span>
           </h1>
 
-          {/* Twitch button — same style as navigation */}
-          <div className="flex min-w-0 items-center justify-center">
-            <a
-              href={TWITCH_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-pink font-archivo text-background inline-flex min-h-12 max-w-full items-center justify-center gap-2 px-5 py-3 text-center text-sm font-black uppercase transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            >
-              <span>REGARDER SUR TWITCH</span>
-              <span aria-hidden="true">↗</span>
-            </a>
+          {/* Introduction */}
+          <div className="mt-6 flex max-w-full flex-col gap-2">
+            <p className="font-archivo text-pink text-[clamp(.85rem,1.2vw,1.05rem)] font-black tracking-wide uppercase">
+              24 heures. Une nuit. Des idées.
+            </p>
+
+            <p className="max-w-[36ch] text-[clamp(.85rem,1.05vw,1rem)] leading-relaxed font-medium text-white/90">
+              Une création numérique collective, en direct de l'IUT du Limousin
+              à Limoges.
+            </p>
           </div>
         </div>
 
-        <p className="mt-6 max-w-[30ch] text-[clamp(.9rem,1.2vw,1.1rem)] font-semibold">
-          24 heures pour réaliser une création numérique, en direct de l'IUT du
-          Limousin.
-        </p>
+        {/* Right: Twitch CTA */}
+        <div className="flex h-full min-w-0 flex-col items-center justify-center gap-4 py-6 text-center">
+          <p className="font-archivo text-xs font-black tracking-[.16em] text-white/80 uppercase">
+            Le direct commence ici
+          </p>
+
+          <a
+            href={TWITCH_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-pink font-archivo text-background inline-flex min-h-12 max-w-full items-center justify-center gap-2 px-5 py-3 text-center text-sm font-black uppercase transition-colors duration-200 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          >
+            <span>REGARDER SUR TWITCH</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <p className="text-xs font-medium text-white/70">
+            7 — 8 janvier 2027 · 9 h à 9 h
+          </p>
+        </div>
       </div>
 
       {/* Countdown tile */}
