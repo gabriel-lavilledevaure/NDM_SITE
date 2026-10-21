@@ -12,15 +12,23 @@ export default function App() {
   return (
     <>
       <Header />
+
       <main>
         <Hero />
+
         <Marquee />
-        <Principle />
+
         <Creation />
-        <Experience />
+
         <BehindTheScenes />
+
+        <Experience />
+
+        <Principle />
+
         <Night />
       </main>
+
       <Footer />
     </>
   );

@@ -25,3 +25,7 @@ npm run dev
 - Tailwind v4 : installé et exposé via `@theme inline`. Les styles spécifiques à la mosaïque restent en CSS pour préserver le rendu original.
 
 Le programme est indicatif et le lien Twitch doit être remplacé.
+
+
+## Photos polaroid
+La photo reçue est incluse en public/archives/nuit-mmi-2025.png. Aucune deuxième photo n’était jointe au message : la carte 2026 affiche un emplacement temporaire. Pour ajouter la vraie photo 2026, place-la dans public/archives/nuit-mmi-2026.jpg et renseigne photo: "/archives/nuit-mmi-2026.jpg" dans src/components/Experience.jsx. La carte 2027 reste blanche volontairement.
