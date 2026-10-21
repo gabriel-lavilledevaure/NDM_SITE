@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Titillium+Web:wght@400;600;700&display=swap");
 @import "tailwindcss";
 
@@ -39,11 +38,11 @@
   }
 
   body {
-    @apply m-0 overflow-x-hidden bg-background text-white font-titillium antialiased;
+    @apply bg-background font-titillium m-0 overflow-x-hidden text-white antialiased;
   }
 
   a:focus-visible {
-    @apply outline-2 outline-offset-4 outline-pink;
+    @apply outline-pink outline-2 outline-offset-4;
   }
 }
 
@@ -54,6 +53,7 @@
 }
 
 /* Geometric poster artwork */
+
 .a {
   grid-area: 1/1/3/2;
   clip-path: polygon(0 5%, 100% 0, 90% 100%, 7% 90%);
@@ -76,14 +76,7 @@
 
 .t {
   grid-area: 2/2/4/6;
-  clip-path: polygon(
-    2% 0,
-    98% 3%,
-    100% 94%,
-    96% 100%,
-    3% 100%,
-    0 80%
-  );
+  clip-path: polygon(2% 0, 98% 3%, 100% 94%, 96% 100%, 3% 100%, 0 80%);
   background: radial-gradient(
     circle at 30% 20%,
     var(--indigo-light),
@@ -151,6 +144,7 @@
 }
 
 /* Camera viewfinder */
+
 .camera-corner {
   position: absolute;
   width: clamp(14px, 1.7vw, 24px);
@@ -186,23 +180,31 @@
   border-top: 0;
 }
 
-/* Interactive eye pupils */
-.wall {
-  --look-x: 0px;
-  --look-y: 0px;
+/* Interactive pupils */
+
+.character-eyes {
+  --gaze-x: 0;
+  --gaze-y: 0;
+  --pupil-range: clamp(2px, 0.9cqw, 9px);
 }
 
-.eyes-wide svg > circle,
-.eyes-surprised svg > g > path:nth-of-type(2),
-.eyes-sleepy svg > path:nth-of-type(2),
-.eyes-sleepy svg > path:nth-of-type(3),
-.eyes-ghost svg > path:nth-of-type(4),
-.eyes-bill svg > g > path:nth-of-type(3) {
-  transform: translate(var(--look-x), var(--look-y));
-  transition: transform 160ms ease-out;
+.character-eyes svg [data-pupil] {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  translate: calc(var(--gaze-x) * var(--pupil-range))
+    calc(var(--gaze-y) * var(--pupil-range));
+
+  transition: translate 140ms ease-out;
 }
 
-/* Marquee animation */
+.eyes-sleepy,
+.eyes-ghost {
+  --pupil-range: clamp(1px, 0.5cqw, 5px);
+}
+
+/* Marquee */
+
 @keyframes tape-move {
   to {
     transform: translateX(-50%);
@@ -210,17 +212,13 @@
 }
 
 /* Accessibility */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .eyes-wide svg > circle,
-  .eyes-surprised svg > g > path:nth-of-type(2),
-  .eyes-sleepy svg > path:nth-of-type(2),
-  .eyes-sleepy svg > path:nth-of-type(3),
-  .eyes-ghost svg > path:nth-of-type(4),
-  .eyes-bill svg > g > path:nth-of-type(3) {
+  .character-eyes svg [data-pupil] {
     transition: none;
   }
 }
